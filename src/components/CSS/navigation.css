@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  color: #eee;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: MontserratLight, sans-serif;
+  cursor: pointer;
+  transition: linear 0.5s;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}

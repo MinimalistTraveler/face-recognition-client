@@ -1,0 +1,83 @@
+.register_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 10px auto;
+  width: 50%;
+  background: linear-gradient(
+    to top left,
+    rgb(117, 121, 255),
+    rgb(178, 36, 239)
+  );
+  padding: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #eee;
+  border-radius: 20px;
+  transition: 0.5s linear;
+  transform: translateY(-5%);
+}
+.form_group {
+  flex-basis: 100%;
+}
+.form_group > input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #eee;
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  transition: 0.5s linear;
+}
+.form_group > input:focus {
+  border: 1px solid #00c3ff;
+  transition: 0.5s linear;
+}
+.register_header {
+  font-family: MontserratLight, sans-serif;
+}
+.register_header > p {
+  margin: 10px;
+  text-align: left;
+}
+.reg-btn {
+  display: block;
+  font-family: MontserratLight, sans-serif;
+  width: 40%;
+  padding: 20px;
+  margin: 10px auto;
+  background: #fff;
+  border-radius: 50px;
+  font-size: 1.2em;
+  border: none;
+  color: #222;
+  transition: 0.2s linear;
+}
+a.reg-btn {
+  text-decoration: none;
+  color: #000;
+}
+.reg-btn:hover {
+  transition: 0.2s linear;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.error {
+  padding: 20px;
+  color: rgb(112, 0, 0);
+  background: #fff;
+  margin: 10px;
+}
+.errorInput {
+  border: 1px solid rgba(255, 0, 0, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .register_container {
+    width: 80%;
+  }
+  .reg-btn {
+    width: 80%;
+  }
+}

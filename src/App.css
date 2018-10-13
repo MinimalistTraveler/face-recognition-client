@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(
+      to top,
+      #3c008a,
+      #2f2695,
+      #2d40b2,
+      #2659cf,
+      #1272eb
+    )
+    no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+/* Fonts
+______________________ */
+
+@font-face {
+  font-family: "MontserratLight";
+  src: url("./fonts/Montserrat-Light.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+.particles-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.translate-container {
+  transform: translateY(-20%);
+}

@@ -1,0 +1,15 @@
+.rank-container {
+  display: flex;
+  justify-content: center;
+}
+.rank-container > p {
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  color: #eee;
+}
+
+.rank-number {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+}

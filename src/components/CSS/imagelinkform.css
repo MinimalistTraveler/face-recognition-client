@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(to top left, #00e9e9, #527aff);
+  border-radius: 15px;
+  padding: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+}
+.container-header {
+  flex-basis: 100%;
+  font-family: MontserratLight, sans-serif;
+  font-size: 1.2em;
+}
+.container-header > p {
+  padding: 20px;
+  text-align: center;
+  line-height: 2em;
+}
+.container-form {
+  flex-basis: 100%;
+}
+.form-group {
+  width: 100%;
+}
+label {
+  display: block;
+  text-align: left;
+  padding: 15px 5px;
+  font-weight: bolder;
+}
+.img-url {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.5em;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  background: #eee;
+  color: #222;
+}
+
+.img-url:focus {
+  border: 1px solid #31cbfa;
+  transition: 0.2s ease-in;
+}
+.btn.btn-submit {
+  width: 70%;
+  padding: 20px;
+  color: #000;
+  border: 2px solid #222;
+  font-size: 1.7em;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .img-url {
+    margin: 0 auto;
+  }
+  .btn.btn-submit {
+    width: 100%;
+  }
+}
