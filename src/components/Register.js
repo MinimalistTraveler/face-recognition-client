@@ -64,33 +64,38 @@ export default class Register extends Component {
 
     // Check Username, Email and Password
     const { error, errorType } = this.validate(username, email, password);
-    if (!error) {
-      // No errors let's update.
-      this.setState({ error: false, typeOfError: null });
-      // If everything is good fetch it
-      const resp = await fetch(
-        "https://aqueous-wildwood-37808.herokuapp.com/register",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            username,
-            email,
-            password
-          })
+    try {
+      if (!error) {
+        // No errors let's update.
+        this.setState({ error: false, typeOfError: null });
+        // If everything is good fetch it
+        const resp = await fetch(
+          "https://aqueous-wildwood-37808.herokuapp.com/register",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              username,
+              email,
+              password
+            })
+          }
+        );
+        const data = await resp.json();
+        if (!data.error) {
+          // Go to the homepage to sign in.
+        } else {
+          this.setState({ error: true, typeOfError: data.error });
+          e.preventDefault();
+          return;
         }
-      );
-      const data = await resp.json();
-      if (!data.error) {
-        // Go to the homepage to sign in.
       } else {
-        this.setState({ error: true, typeOfError: data.error });
+        this.setState({ error: true, typeOfError: errorType });
         e.preventDefault();
         return;
       }
-    } else {
-      this.setState({ error: true, typeOfError: errorType });
-      e.preventDefault();
+    } catch (e) {
+      console.log(e.message);
       return;
     }
   };
