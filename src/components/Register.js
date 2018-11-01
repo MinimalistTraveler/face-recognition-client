@@ -69,18 +69,15 @@ export default class Register extends Component {
         // No errors let's update.
         this.setState({ error: false, typeOfError: null });
         // If everything is good fetch it
-        const resp = await fetch(
-          "https://aqueous-wildwood-37808.herokuapp.com/register",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              username,
-              email,
-              password
-            })
-          }
-        );
+        const resp = await fetch("ROUTE", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username,
+            email,
+            password
+          })
+        });
         const data = await resp.json();
         if (!data.error) {
           // Go to the homepage to sign in.

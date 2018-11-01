@@ -35,16 +35,13 @@ class Home extends Component {
     }
     try {
       // Try to fetch and extract the user's information from that token.
-      const resp = await fetch(
-        "https://aqueous-wildwood-37808.herokuapp.com/profile",
-        {
-          method: "GET",
-          headers: new Headers({
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json"
-          })
-        }
-      );
+      const resp = await fetch("ROUTE", {
+        method: "GET",
+        headers: new Headers({
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json"
+        })
+      });
       const data = await resp.json();
       // If everything turns out ok set the user's data into the state.
       return this.setState({ user: data });
@@ -78,17 +75,14 @@ class Home extends Component {
     e.preventDefault();
     try {
       // Lets send a request to our server for the coordinates.
-      const resp = await fetch(
-        "https://aqueous-wildwood-37808.herokuapp.com/image",
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            id: Number(this.state.user.id),
-            input: this.state.input
-          })
-        }
-      );
+      const resp = await fetch("ROUTE", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: Number(this.state.user.id),
+          input: this.state.input
+        })
+      });
 
       const data = await resp.json();
       // Extract the coordinates and put them into the state to be calculated and converted.
