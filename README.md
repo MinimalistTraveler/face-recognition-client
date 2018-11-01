@@ -1,2 +1,3 @@
-# Front end app for face recongition app
-This is the front-end side with react on my face recongition app. 
+# Front end app for face recongition app version 1
+
+This is the front-end side of the face recongition app.
